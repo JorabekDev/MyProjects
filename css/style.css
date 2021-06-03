@@ -1,0 +1,3894 @@
+:root {
+  --coloryellow: #ffff00;
+  --colorWhite: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.loading {
+  margin: 0 auto;
+  position: fixed;
+  background-color: var(--colorWhite);
+  width: 100%;
+  height: 100%;
+  z-index:9999;
+  animation: fadeOut 2s;
+  -webkit-animation: fadeOut 2s;
+  -moz-animation: fadeOut 2s;
+  -o-animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+}
+.dot {
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.dot2 {
+  border: 5px solid var(--coloryellow);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: -5px -5px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  animation: loder 1s;
+  animation-iteration-count: infinite;
+  -webkit-animation: loder 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation: loder 1s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: loder 1s;
+  -o-animation-iteration-count: infinite;
+}
+@keyframes loder {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loder {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.main1 {
+  display: flex;
+  justify-content: center;
+  margin: 15rem auto;
+}
+/* Fontlar
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 3px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+.navbar {
+  background-color: transparent !important;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+.fixed {
+  background-color: #000000 !important;
+  padding:0;
+}
+.navbar-brand {
+  font-size: 1.7rem;
+  color: var(--coloryellow) !important;
+  padding-left: 6rem;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+}
+.navbar-nav {
+  margin: 0 47% auto;
+}
+.nav-link {
+  color: var(--colorWhite) !important ;
+}
+li .nav-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  color: var(--coloryellow);
+  width: 0%;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+}
+li .nav-link:hover::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #c51414;
+  width: 100%;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+.navbar-nav > li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 15px;
+  color: var(--colorWhite) !important;
+  font-family: "Open Sans", sans-serif;
+}
+.nav-link:hover {
+  color: var(--coloryellow) !important;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+#home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url(../imegs/2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:40rem;
+  background-position:right 100% top 69%;
+  /* overflow: hidden; */
+}
+#home .col-md-6 {
+  margin: 20% auto;
+}
+#home .container .row .col-md-6 .titles h1 {
+  font-size: 3.7rem;
+  color: var(--colorWhite);
+  text-align: center;
+  font-family: "Loto" sans-serif;
+  letter-spacing: 0.3px;
+}
+#home .container .row .col-md-6 .titles p {
+  color: var(--colorWhite);
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.button {
+  width: 100%;
+  margin: 2rem 11rem auto;
+  
+}
+.button > a {
+  background-color: var(--coloryellow);
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+}
+.button > a:hover{
+  background-color: red;
+  color:#fff;
+}
+/* servicese */
+#services {
+  padding: 4rem 0 4rem;
+}
+.subtitle{
+margin-bottom: -5px;
+font-size: 25px;
+font-family: 'Loto',sans-serif;
+}
+#services .container > h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+#services .container .row .col-md-4 .card {
+    border-radius: 15px;
+    background-color:#f0f8ff;
+    height: 20rem;
+    border: 2px solid #edf8f8;
+}
+#services .container .row .col-md-4 .card .card-header {
+  text-align: center;
+  border-bottom: none;
+  background-color: transparent;
+}
+.card .card-header i {
+  font-size: 3rem;
+  background-color: var(--coloryellow);
+  padding: 1rem;
+  border-radius: 50px;
+  height: 100px;
+   width: 100px;
+  line-height: 70px;
+}
+
+.card .card-body {
+  text-align: center;
+}
+
+
+/* portfoilo bo'lmi */
+#portfoilo {
+  padding: 0.5rem 0 0.5rem;
+   text-align: center;
+}
+#projects{
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  padding: 5px 10px;
+  background-color: black;
+  color: var(--coloryellow);
+  border-radius: 21px;
+  font-family: "Roboto",sans-serif;
+}
+#projects:hover{
+  color: black;
+  background-color: var(--coloryellow);
+}
+#portfoilo .overlay {
+  background-color: var(--coloryellow);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3 ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+#portfoilo .overlay:hover {
+  opacity:0.8;
+}
+.overlay h4 {
+  text-align: center;
+  margin-top: 2.3rem;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+}
+.overlay p {
+  text-align: center;
+  font-family: "Loto", sans-serif;
+  font-size: 1.5rem;
+  margin-top: -5px;
+}
+#portfoilo .container > h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+/* About section */
+#about {
+  padding: 5rem 0 5rem;
+}
+#about .container > h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+#jura{
+  height: 90vh;
+  width: 90%;
+  
+}
+
+
+#about .container .row .col-md-6:nth-child(2) {
+ margin: 0rem 0rem 0rem;
+}
+
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 1rem 0 1rem;
+    letter-spacing: 0.8px;
+    line-height: 33px;
+    font-size: 19px;
+}  
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+  font-size: 2rem;
+}
+.info ul {
+  margin-left: -29px;
+}
+.info h4 {
+  font-family: "Loto", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.info ul li {
+  list-style-type: none;
+  display: flex;
+  font-size: 1rem;
+  
+}
+.main{
+  margin-top: 40px;
+}
+ .firstSpan {
+  font-weight: bold;
+
+}
+ .secoundSpan {
+  color: #808080;
+
+}
+ .secoundSpan a{
+   color: #808080;
+   text-decoration: none;
+ } 
+.stil-til{
+  font-weight: bold;
+  margin: 5px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+/* footer qismi */
+#footer {
+  background-color: #000000;
+  padding: 2rem;
+}
+.copyright,
+.smallinfo {
+  color: var(--colorWhite);
+  
+}
+.copyright{
+  margin-top: 100px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.smallinfo{
+  font-family: 'Loto',sans-serif;
+  letter-spacing: 1px;
+}
+.social-netWorks a {
+  text-decoration: none;
+  margin: 5px;
+}
+.social-netWorks a i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: var(--coloryellow);
+  font-size: 1.5rem;
+  text-align: center;
+  color: #000000;
+  transition: 1s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.social-netWorks a i:hover {
+  color: var(--coloryellow);
+  background-color: #000000;
+}
+.footer-ul{
+  list-style-type: none;
+  margin-left: -30px;
+  color: #fff;
+  
+}
+.footer-ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Loto', sans-serif;
+  letter-spacing: 1px;
+/* font-family: 'Roboto', sans-serif; */
+
+}
+.contact-me{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Loto',sans-serif;
+
+
+}
+.ism{
+  text-transform: uppercase;
+  background-color: blue;
+  border-radius: 18px;
+  margin: 0 5px;
+  padding: 0 7px;
+}
+.fa.fa-phone,.fa.fa-envelope{
+  color: rgb(126, 113, 113);
+  margin: 0 5px;
+}
+.fa.fa-phone:hover,.fa.fa-envelope:hover{
+  color: #fff;
+}
+.pochtaTel a{
+  color: rgb(126, 113, 113);
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+}
+.pochtaTel a:hover{
+  color: #fff;
+}
+/*animatsiya text*/
+.ml11 {
+  font-weight: 700;
+  font-size: 2.5em;
+   
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 1.15em;
+  margin: 0 83px;
+   
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+ 
+}
+
+.ml11 .line1 { 
+  top: -4px; 
+  left: 0;
+  height: 70px;
+  
+ 
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1rem;
+  color: #fff;
+ 
+}
+/*animatsiya text end*/
+/* Fixed */
+.to-top {
+  width: 50px;
+  height: 50px;
+  background-color: #104088;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 16px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  size: 5px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s; 
+}
+  .to-top i {
+    width: 50px;
+    height: 50px;
+    margin-top: -15px;
+    font-size: 1.5rem;
+    color: #FFFFFF !important; 
+  }
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+  color: #FFFFFF; 
+}
+
+/* Fixed end */
+
+  
+
+/* RESPONSIVE */
+@media screen and (max-width:1200px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 200px 0;
+     width: 100%;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:3.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 54% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 2.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 11px;
+    left: 0;
+    height: 54px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 32%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+.copyright p {
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+    font-size: 14px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#services .container .row .col-md-4 .card {
+    height: 24rem;
+}
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 1rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 2rem;
+    margin-top: -0.3rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 3rem;
+    letter-spacing:1px;
+    line-height: 25px;
+    font-size: 19px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 6px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+    margin-left: 11px;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+.icon-text{
+  display: contents;
+}
+.secoundSpan {
+    width: 65%;
+    margin-top: 2px;
+    font-size: 18px;
+}
+/* footer */
+#footer {
+    padding: 1.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin: 21px 0px 11px 103px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 5px solid black;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+}
+.dot2 {
+    border: 5px solid var(--coloryellow);
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    margin: -5px -5px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+@media screen and (max-width:1020px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 200px 0;
+     width: 100%;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:3.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 51% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 2.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 11px;
+    left: 0;
+    height: 54px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 28%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+.copyright p {
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+    font-size: 14px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#services .container .row .col-md-4 .card {
+    height: 24rem;
+}
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 1rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 2rem;
+    margin-top: -0.3rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 3rem;
+    letter-spacing:1px;
+    line-height: 25px;
+    font-size: 19px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 6px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+    margin-left: 11px;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+.icon-text{
+  display: contents;
+}
+.secoundSpan {
+    width: 65%;
+    margin-top: 2px;
+    font-size: 18px;
+}
+/* footer */
+#footer {
+    padding: 1.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin: 21px 0px 11px 103px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 5px solid black;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+}
+.dot2 {
+    border: 5px solid var(--coloryellow);
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    margin: -5px -5px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+@media screen and (max-width:992px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:3px;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 200px 0;
+     width: 100%;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:3.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 51% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 2.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 11px;
+    left: 0;
+    height: 54px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 28%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+.copyright p {
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+    font-size: 14px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#services .container .row .col-md-4 .card {
+    height: 24rem;
+}
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 1rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 2rem;
+    margin-top: -0.3rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 3rem;
+    letter-spacing:1px;
+    line-height: 25px;
+    font-size: 19px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 6px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+    margin-left: 11px;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+.icon-text{
+  display: contents;
+}
+.secoundSpan {
+    width: 65%;
+    margin-top: 2px;
+    font-size: 18px;
+}
+/* footer */
+#footer {
+    padding: 1.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin: 21px 0px 11px 103px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 5px solid black;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+}
+.dot2 {
+    border: 5px solid var(--coloryellow);
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    margin: -5px -5px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+@media screen and (max-width:976px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 200px 0;
+     width: 100%;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:3.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 51% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 2.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 11px;
+    left: 0;
+    height: 54px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 25%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+.copyright p {
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+    font-size: 14px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#services .container .row .col-md-4 .card {
+    height: 24rem;
+}
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 1rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+    margin-left: 11px;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+.icon-text{
+  display: contents;
+}
+.secoundSpan {
+    width: 65%;
+    margin-top: 2px;
+    font-size: 16px;
+}
+/* footer */
+#footer {
+    padding: 1.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin: 21px 0px 11px 103px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 5px solid black;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+}
+.dot2 {
+    border: 5px solid var(--coloryellow);
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    margin: -5px -5px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+@media screen and (max-width:767px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -2%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 54% auto;
+   
+  }
+  #home{
+    height: 100vh;
+    background-image:url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 30%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 2.5rem;
+   margin-bottom: -6px;
+   margin-top: 6rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 29px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+@media screen and (max-width:501px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 54% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 25%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 5rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height:100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+@media screen and (max-width:487px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+    margin: 31px 54% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 28%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 5rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+@media screen and (max-width:460px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+    margin: 31px 54% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 25%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 5rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+
+@media screen and (max-width:455px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+    margin: 31px 54% auto;
+  }
+  #home{
+    height:100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 24%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 5rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+@media screen and (max-width:400px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+  margin: 31px 55% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 19%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+@media screen and (max-width:396px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+  margin: 31px 55% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 21%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+@media screen and (max-width:370px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+   .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:1.9rem;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 55% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.3rem;
+    font-weight: 300;
+
+  }
+  .ml11 .line1{
+    top: -2px;
+    left: 0;
+    height: 35px;
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 22%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 2.6rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
+@media (min-width:315px) and (max-width:330px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+  .container-fluid{
+    margin: 2% 0;
+  }
+  .navbar-toggler{
+    margin-right: -3%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .navbar-nav{
+ margin: 0px 39% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:1.9rem;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 55% auto;
+  }
+  #home{
+    height: 100vh;
+    background-image:
+    url(../imegs/mobilne.jpg);
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.3rem;
+    font-weight: 300;
+
+  }
+  .ml11 .line1{
+    top: -2px;
+    left: 0;
+    height: 35px;
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 19%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 1.5rem;
+   margin-bottom: -6px;
+   margin-top: 2.6rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 1rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}

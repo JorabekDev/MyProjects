@@ -1,0 +1,2536 @@
+
+body {
+  box-sizing: border-box;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+
+}
+/* header */
+#header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./imges/Header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 90% top 65%;
+}
+/* header END */
+/* loder */
+.loading {
+  margin: 0 auto;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index:9999;
+  animation: fadeOut 2s;
+  -webkit-animation: fadeOut 2s;
+  -moz-animation: fadeOut 2s;
+  -o-animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+}
+.dot {
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.dot2 {
+  border: 5px solid yellow;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: -5px -5px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  animation: loder 1s;
+  animation-iteration-count: infinite;
+  -webkit-animation: loder 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation: loder 1s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: loder 1s;
+  -o-animation-iteration-count: infinite;
+}
+@keyframes loder {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loder {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.main1 {
+  display: flex;
+  justify-content: center;
+  margin: 15rem auto;
+}
+/* LODER END*/
+
+/* scrolbar */
+::-webkit-scrollbar {
+  width: 3px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color:yellow;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+/* SCROLL BAR END */
+
+/* NAVBAR */
+.navbar {
+  background-color: transparent !important;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+.fixed {
+  background-color: #000000 !important;
+  padding: 0px
+}
+.navbar-brand {
+  font-size: 1.7rem;
+  color: yellow !important;
+  padding-left: 9%;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+}
+.navbar-nav {
+  margin: 0px 9% auto;
+  width: 100%;
+  display:flex;
+  justify-content: flex-end;
+}
+.nav-link {
+  color: #fff!important ;
+}
+li .nav-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  color: yellow;
+  width: 0%;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+}
+li .nav-link:hover::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #c51414;
+  width: 100%;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+.navbar-nav > li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 15px;
+  color: var(--colorWhite) !important;
+  font-family: "Open Sans", sans-serif;
+}
+.nav-link:hover {
+  color:yellow !important;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+/* NAVBAR END */
+
+/*Reusable elements name*/
+section {
+  padding: 40px 0;
+}
+.row {
+  margin-bottom: 30px;
+}
+.section-heading {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  text-align: center;
+}
+.section-subheading {
+  color: #555;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+h3 {
+  color: #555;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/*Reusable elements name END*/
+
+.section-heading::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100px;
+  background-color: red;
+  margin: 40px auto;
+}
+/* header CtA */
+.header-cta h1 {
+  color: #fff;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.header-cta h1 span {
+  color: red;
+}
+.header-cta div {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.header-cta {
+  position: relative;
+  top: 30%;
+}
+.button--hero {
+  font-size: 25px;
+  text-decoration: none;
+  border: 1px solid red;
+  padding: 8px 25px;
+  color: red;
+  border-radius: 27px;
+  transition-duration: 0.5s;
+}
+.button--hero:hover {
+  color: #fff;
+  background-color: red;
+  transition: 1s;
+}
+/* section-Deffence */
+.difference-section_item {
+  display: inline-block;
+  width: 50%;
+  margin-left: -4px;
+  padding-right: 30px;
+
+  vertical-align: top;
+}
+.difference-section_item p,
+.admissions-parent {
+  color: #555;
+  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.fas.fa-exclamation-circle,
+.fas.fa-terminal,
+.fas.fa-exchange-alt,
+.fas.fa-lightbulb {
+  font-size: 40px;
+  color: red;
+  margin-bottom: 20px;
+}
+/*typical Day*/
+#typical-day-section {
+  background-color: #555;
+}
+#typical-day-section .section-heading,
+#typical-day-section .section-subheading {
+  color: #fff;
+}
+#typical-day-section .section-subheading {
+  text-transform: uppercase;
+}
+#typical-day-section .row {
+  border-bottom: 1px solid #fff;
+}
+.moring-schedule,
+.afernoon-schedule {
+  width: 50%;
+  display: inline-block;
+}
+.moring-schedule {
+  border-right: 1px solid #fff;
+}
+.afernoon-schedule {
+  margin-left: -5px;
+}
+.time {
+  color: red;
+  font-size: 25px;
+}
+.time sup {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.evening-schedule {
+  text-align: center;
+}
+.evening-schedule span:first-child {
+  margin-right: 10px;
+}
+.moring-schedule ul,
+.afernoon-schedule ul {
+  list-style-type: none;
+}
+.afernoon-schedule ul:last-child {
+  padding-left: 25px;
+}
+.moring-schedule ul li,
+.afernoon-schedule ul li {
+  display: flex;
+  margin-bottom: 12px;
+}
+.moring-schedule ul li span:first-child,
+.afernoon-schedule ul li span:first-child {
+  width: 60px;
+}
+.moring-schedule ul li span:last-child,
+.afernoon-schedule ul li span:last-child {
+  color: #fff;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  width: calc(100% - 100px);
+}
+
+/*curriculum section*/
+.curriculm-section-text,
+.curriculum-section-imag-wrapper {
+  display: inline-block;
+}
+.curriculm-section-text {
+  width: 40%;
+  vertical-align: top;
+}
+.curriculum-section-imag-wrapper {
+  width: 60%;
+  margin-left: -5px;
+}
+#image:hover {
+  width: 100%;
+  opacity: 1;
+  transition: all 1s;
+  transform: scale(1.1);
+}
+#image {
+  transform: scale(0.8);
+  width: 100%;
+  opacity: 0.7;
+  transition-duration: 0.5s;
+}
+.curriculm-section-weeks {
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 50%;
+}
+.week {
+  margin-bottom: -30px;
+}
+.curriculm-section-weeks:nth-child(2) {
+  margin-left: -5px;
+}
+.curriculm-section-weeks h4 {
+  color: red;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.curriculm-section-week {
+  list-style-type: none;
+}
+.curriculm-section-week li {
+  color: #555;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  border-left: 2px solid red;
+  padding-left: 15px;
+}
+/*Admissions section*/
+#section-admissions {
+  background-color: #d1ecff;
+}
+.admissions-rext {
+  width: 25%;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+.admissions-parent {
+  display: flex;
+}
+.admission-text{
+  font-size: 17px;
+  font-family: "Quattrocento Sans", sans-serif;;
+}
+.button {
+  background-color: rgb(0, 89, 255);
+  padding: 8px 50px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+.button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.button:hover {
+  background-color: rgb(36, 206, 155);
+  transition: all 0.5s;
+}
+.fab.fa-wpforms,
+.far.fa-keyboard,
+.far.fa-comments,
+.far.fa-check-circle {
+  font-size: 40px;
+  color: rgb(0, 89, 255);
+  margin-bottom: 20px;
+}
+/*footer-section*/
+
+#footer {
+  background-color: #000000;
+  padding: 2rem ;
+  height: 500px;
+  
+}
+.copyright,
+.smallinfo {
+  color:#fff;
+  
+}
+.copyright{
+  margin-top: 53px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.smallinfo{
+  font-family: 'Loto',sans-serif;
+  letter-spacing: 1px;
+}
+.social-netWorks a {
+  text-decoration: none;
+  margin: 5px;
+}
+.social-netWorks a i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: yellow;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #000000;
+  transition: 1s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.social-netWorks a i:hover {
+  color: var(--coloryellow);
+  background-color: #000000;
+}
+.footer-ul{
+  list-style-type: none;
+  margin-left: -3px;
+  color: #fff;
+  
+}
+.footer-ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Loto', sans-serif;
+  letter-spacing: 1px;
+/* font-family: 'Roboto', sans-serif; */
+
+}
+.contact-me{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Loto',sans-serif;
+
+
+}
+.ism{
+  text-transform: uppercase;
+  background-color: blue;
+  border-radius: 18px;
+  margin: 0 5px;
+  padding: 0 7px;
+}
+.fa.fa-phone,.fa.fa-envelope{
+  color: rgb(126, 113, 113);
+  margin: 0 5px;
+}
+.fa.fa-phone:hover,.fa.fa-envelope:hover{
+  color: #fff;
+}
+.pochtaTel a{
+  color: rgb(126, 113, 113);
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+}
+.pochtaTel a:hover{
+  color: #fff;
+}
+ol, ul {
+    padding-left: 0rem
+}
+/*TEXT ANIMATION*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+#intersiv {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 20px;
+  color:#fff;
+  margin: 20px 0 ;
+}
+
+/* Animation */
+#intersiv {
+  animation: animated-text 4s steps(25,end) 1s  0.5 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+
+/*TEXT ANIMATION*/
+
+/* Fixed */
+.to-top {
+  width: 50px;
+  height: 50px;
+  background-color: #104088;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 17px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  size: 5px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s; 
+}
+  .to-top i {
+    width: 50px;
+    height: 50px;
+    margin-top: -15px;
+    font-size: 1.5rem;
+    color: #FFFFFF !important; 
+  }
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+  color: #FFFFFF; }
+
+/* Fixed end */
+@media screen and (max-width:991.98px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .navbar-nav{
+    margin: 0% 32% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 221%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+      margin-top: -1%;
+    margin-left: 17px;
+    font-size: 28px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 5%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 28px
+}
+.time sup {
+    font-size: 13px;
+}
+.moring-schedule {
+    border-right: 1px solid transparent;
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 11%; 
+}
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 31px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:138%;
+    margin: 4% 0;
+}
+}
+@media screen and (max-width:1199.98px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .navbar-nav{
+    margin: 0% 46% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 221%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+      margin-top: -1%;
+    margin-left: 17px;
+    font-size: 28px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 5%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 28px
+}
+.time sup {
+    font-size: 13px;
+}
+.moring-schedule {
+    border-right: 1px solid transparent;
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 11%; 
+}
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 31px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:138%;
+    margin: 4% 0;
+}
+}
+
+@media screen and (max-width:991.98px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .navbar-nav{
+    margin: 0% 32% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 221%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+      margin-top: -1%;
+    margin-left: 17px;
+    font-size: 28px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 5%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 28px
+}
+.time sup {
+    font-size: 13px;
+}
+.moring-schedule {
+    border-right: 1px solid transparent;
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 11%; 
+}
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 31px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:138%;
+    margin: 4% 0;
+}
+}
+@media screen and (max-width:958px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .navbar-nav{
+    margin: 0% 8% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 221%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+      margin-top: -1%;
+    margin-left: 17px;
+    font-size: 28px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 5%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 28px
+}
+.time sup {
+    font-size: 13px;
+}
+.moring-schedule {
+    border-right: 1px solid transparent;
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 11%; 
+}
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 31px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:138%;
+    margin: 4% 0;
+}
+}
+
+@media screen and (max-width:767.98px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .navbar-nav{
+    margin: 0 40% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 22%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 221%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+   
+    margin-left: 17px;
+    font-size: 28px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 5%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 28px
+}
+.time sup {
+    font-size: 13px;
+}
+.moring-schedule {
+    border-right: 1px solid transparent;
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 11%; 
+}
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 31px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:138%;
+    margin: 4% 0;
+}
+}
+
+
+@media screen and (max-width:575.98px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-nav{
+    margin: 0 40% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 22%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 188%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+   
+    margin-left: 16px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 5%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 22px
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 11%; 
+}
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 25px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:122%;
+    margin: 4% 0;
+}
+}
+@media screen and (max-width:450px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .navbar-nav{
+    margin: 0 36% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 22%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 221%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+   
+    margin-left: 17px;
+    font-size: 28px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 5%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 28px
+}
+.time sup {
+    font-size: 13px;
+}
+.moring-schedule {
+    border-right: 1px solid transparent;
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 24%; 
+}
+
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 31px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:138%;
+    margin: 4% 0;
+}
+}
+@media screen and (max-width:360px){
+   html,body{
+    overflow-x: hidden;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0;
+    font-size: 1.3rem;
+  }
+  .navbar-nav{
+    margin: 0 31% auto;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    width: 22%;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+  .fixed {
+    padding: 2% 0;
+  }
+  .navbar li{
+    margin: 5px;
+  }
+  .header-cta h1{
+    font-size: 188%;
+  }
+  .header-cta {
+    margin-left: 10px;
+    position: relative;
+    top: 22%;
+  }
+  .section-heading {
+    font-size: 20px;
+    
+}
+.navbar-dark .navbar-brand {
+   
+    margin-left: 16px;
+}
+.section-subheading {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.difference-section_item{
+  display: block;
+   width: 100%;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.moring-schedule{
+      display: block;
+    width: 100%;
+}
+.afernoon-schedule{
+     display: block;
+    width: 100%;
+    margin-left: -26px;
+}
+.curriculm-section-weeks {
+    display: inline-block;
+    width: 53%;
+    display: inline-table;
+}
+.curriculm-section-text {
+    width: 100%;
+   text-align: center;
+    
+    
+}
+.curriculm-section-week li {
+    color: #555;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-left: 1px solid red;
+    padding-left: 15px;
+
+}
+.curriculm-section-weeks h4 {
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    
+}
+.curriculm-section-text{
+  margin-left: 2%;
+}
+.fas.fa-exclamation-circle, .fas.fa-terminal, .fas.fa-exchange-alt, .fas.fa-lightbulb {
+    font-size: 190%;
+    color: red;
+    margin-bottom: 12px
+}
+h3{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.difference-section_item p, .admissions-parent {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-heading::after {
+    height: 1px;
+    width: 80px;
+    margin: 23px auto
+}
+section {
+    padding: 20px 0;
+}
+.row {
+    margin-bottom: 10px;
+}
+.moring-schedule ul li span:last-child, .afernoon-schedule ul li span:last-child {
+    color: #fff;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%; 
+}
+.time {
+    font-size: 22px
+}
+.moring-schedule ul li span:first-child, .afernoon-schedule ul li span:first-child {
+     width: 16%; 
+}
+#typical-day-section .section-subheading {
+    font-size: 18px;
+}
+.curriculum-section-imag-wrapper {
+     width:100%;
+    margin: 15px 10px 15px  1px;
+}
+#image:hover {
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
+}
+.admissions-parent{
+  display: block;
+}
+.admissions-rext {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.fab.fa-wpforms, .far.fa-keyboard, .far.fa-comments, .far.fa-check-circle {
+    font-size: 190%;
+    margin-bottom: 6px
+}
+/* footer */
+#footer{
+  height: 553px;
+  padding: 0.2rem;
+}
+.contact-me {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Loto',sans-serif;
+    margin-left: -1px;
+    margin-bottom: 7px;
+}
+.footer-ul li a {
+    font-size: 13px;
+}
+.text-center {
+    text-align: left!important;
+}
+.social-netWorks{
+  width: max-content;
+  margin-bottom: 8px;
+  margin-left: -7px;
+}
+.social-netWorks a i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 19px;
+    background-color: yellow;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-ul {
+    margin-bottom: 6px;
+}
+.smallinfo {
+    letter-spacing: 1px;
+    font-size: 15px;
+   
+}
+.copyright {
+    font-size: 16px;
+}
+#tamom{
+  margin-top: -53px;
+}
+.button {
+    padding: 4px 25px;
+    border-radius: 18px;
+  
+}
+.button--hero {
+    font-size: 25px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 4px 16px;
+    color: red;
+    border-radius: 27px;
+    transition-duration: 0.5s;
+}
+
+
+/*TEXT ANIMATION*/
+#intersiv {
+    animation: animated-text 4s steps(25,end) 1s 0.5 normal both, animated-cursor 600ms steps(29,end) infinite;
+}
+
+#intersiv {
+    font-size:122%;
+    margin: 4% 0;
+}
+}
