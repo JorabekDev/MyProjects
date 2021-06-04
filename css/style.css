@@ -101,7 +101,7 @@ font-family: 'Roboto', sans-serif; */
 .navbar-brand {
   font-size: 1.7rem;
   color: var(--coloryellow) !important;
-  padding-left: 6rem;
+  padding-left: 4rem;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1px;
 }
@@ -215,7 +215,7 @@ font-family: 'Loto',sans-serif;
 #services .container .row .col-md-4 .card {
     border-radius: 15px;
     background-color:#f0f8ff;
-    height: 20rem;
+    height: 25rem;
     border: 2px solid #edf8f8;
 }
 #services .container .row .col-md-4 .card .card-header {
@@ -357,7 +357,7 @@ font-family: 'Loto',sans-serif;
 /* footer qismi */
 #footer {
   background-color: #000000;
-  padding: 2rem;
+  padding: 5rem;
 }
 .copyright,
 .smallinfo {
@@ -518,11 +518,16 @@ font-family: 'Loto',sans-serif;
   color: #FFFFFF; 
 }
 
+.ma{
+  padding: 4rem 0!important;
+}
+
 /* Fixed end */
 
   
 
 /* RESPONSIVE */
+
 @media screen and (max-width:1200px){
    html,body{
     overflow-x: hidden;
@@ -536,14 +541,17 @@ font-family: 'Loto',sans-serif;
     text-decoration: none;
   }
   .navbar-brand {
-    padding:0;
+    padding:0 4%;
     font-size: 1.3rem;
   }
   .change{
     background-color: #000000!important;
   }
+    .container-fluid{
+    margin: 1% 0;
+  }
   .navbar-nav{
- margin: 0px 39% auto;
+ margin: 0px 52% auto;
 
   }
   .navbar-nav li{
@@ -573,8 +581,6 @@ font-family: 'Loto',sans-serif;
   }
   #home{
     height: 100vh;
-    background-image:
-    url(../imegs/mobilne.jpg);
   }
   #home .balandlik{
     margin-top: 37px;
@@ -796,14 +802,17 @@ margin: 15px 32%;
     text-decoration: none;
   }
   .navbar-brand {
-    padding:0;
+    padding:0 4%;
     font-size: 1.3rem;
   }
   .change{
     background-color: #000000!important;
   }
+    .container-fluid{
+    margin: 1% 0;
+  }
   .navbar-nav{
- margin: 0px 39% auto;
+ margin: 0px 43% auto;
 
   }
   .navbar-nav li{
@@ -833,8 +842,6 @@ margin: 15px 32%;
   }
   #home{
     height: 100vh;
-    background-image:
-    url(../imegs/mobilne.jpg);
   }
   #home .balandlik{
     margin-top: 37px;
@@ -1056,11 +1063,14 @@ margin: 15px 28%;
     text-decoration: none;
   }
   .navbar-brand {
-    padding:3px;
+    padding: 0 4%;
     font-size: 1.3rem;
   }
   .change{
     background-color: #000000!important;
+  }
+    .container-fluid{
+    margin: 1% 0;
   }
   .navbar-nav{
  margin: 0px 39% auto;
@@ -1093,8 +1103,6 @@ margin: 15px 28%;
   }
   #home{
     height: 100vh;
-    background-image:
-    url(../imegs/mobilne.jpg);
   }
   #home .balandlik{
     margin-top: 37px;
@@ -1316,14 +1324,17 @@ margin: 15px 28%;
     text-decoration: none;
   }
   .navbar-brand {
-    padding:0;
+    padding: 0 4%;
     font-size: 1.3rem;
   }
   .change{
     background-color: #000000!important;
   }
+    .container-fluid{
+    margin: 1% 0;
+  }
   .navbar-nav{
- margin: 0px 39% auto;
+ margin: 0px 38% auto;
 
   }
   .navbar-nav li{
@@ -1353,8 +1364,6 @@ margin: 15px 28%;
   }
   #home{
     height: 100vh;
-    background-image:
-    url(../imegs/mobilne.jpg);
   }
   #home .balandlik{
     margin-top: 37px;
@@ -1563,6 +1572,271 @@ margin: 15px 25%;
 }
 }
 
+@media screen and (max-width:900px){
+   html,body{
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 1px !important ;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--coloryellow);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+  
+  .navbar-toggler{
+    margin-right: -2%;
+  }
+  .navbar button {
+    border: none;
+  }
+  .navbar button:focus{
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .navbar-brand {
+    padding:0 4%;
+    font-size: 1.3rem;
+  }
+  .change{
+    background-color: #000000!important;
+  }
+    .container-fluid{
+    margin: 1% 0;
+  }
+  .navbar-nav{
+ margin: 0px 26% auto;
+
+  }
+  .navbar-nav li{
+    margin: 4px;
+  }
+  /* home */
+   #home .container .row .col-md-6{
+     margin: 100px 0;
+   }
+  #home .container .row .col-md-6 .titles h1{
+    font-size:2.1rem;
+    font-weight: 700;
+
+  }
+  #home .container .row .col-md-6 .titles p{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .button a{
+    padding: 0.5rem 4rem;
+    margin: 0 -120px;
+  }
+  .button{
+    width: 100%;
+   margin: 31px 54% auto;
+   
+  }
+  #home{
+    height: 100vh;
+  }
+  #home .balandlik{
+    margin-top: 37px;
+  }
+  .ml11{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .ml11 .line1{
+    top: 4px;
+    left: 0;
+    height: 35px;
+
+  }
+  ul li .secoundSpan {
+  color: #808080;
+ position: absolute;
+ right: 22px;
+}
+.ml11 .text-wrapper{
+margin: 15px 30%;
+ width: 100%;
+}
+
+/*services*/
+#services .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -9px
+}
+.subtitle {
+       margin: 8px 0;
+    font-size: 16px;
+}
+#services {
+    padding: 1rem 0 0rem;
+}
+.card .card-header i {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 34px;
+}
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.masofa{
+  margin-bottom:10px ;
+}
+.text-center i{
+  font-size: 13px;
+  margin-bottom: -100px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-bottom: -20px;
+}
+#portfoilo .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+
+
+
+#portfoilo .overlay {
+    height: 100%;
+    width: 100%;
+
+}
+.overlay h4 {
+   font-size: 2.5rem;
+   margin-bottom: -6px;
+   margin-top: 6rem;
+}
+#projects {
+    padding: 2px 5px;
+}
+.overlay p {
+    font-size: 29px;
+    margin-bottom: 2px;
+}
+.mt-5 {
+    margin-top: 2rem!important;
+}
+/* about qismi */
+#about .container > h3 {
+    font-size: 1.8rem;
+    margin-bottom: -8px;
+}
+#about {
+    padding: 0.5rem 0 0.5rem;
+}
+#jura {
+    height: 100%;
+    width: 100%;
+}
+#about .container .row .col-md-6:nth-child(2) .info h4 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+#about .container .row .col-md-6:nth-child(2) .info p {
+    margin: 0rem 0 0rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.stil-til {
+    font-weight: bold;
+    margin: 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.firstSpan {
+    font-weight: bold;
+    font-size: 15px;
+    width: 35%;
+}
+.secoundSpan {
+    color: #808080;
+    width:65%;
+    float: right;
+    margin-top: -22px;
+    font-size: 15px;
+}
+/* footer */
+#footer {
+    padding: 0.2rem;
+    height: 101%;
+}
+.contact-me {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.footer-ul li a {
+    font-size: 12px;
+}
+.social-netWorks{
+    margin-bottom: 8px;
+    margin-left: -7px;
+    margin-top: 5px;
+}
+.social-netWorks a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+   
+}
+.smallinfo {
+    margin-bottom: 5px;
+    font-family: 'Loto',sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer-ul {
+    margin-bottom: 4px;
+}
+.text-center1 {
+    text-align:left!important;
+    margin-left: -15px;
+}
+.copyright {
+    margin-top: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.pochtaTel a {
+    font-size: 14px;
+    
+}
+/* loder */
+.main1 {
+    margin: 12rem auto;
+}
+.dot {
+    border: 2px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.dot2 {
+    border: 2px solid var(--coloryellow);
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: -2px -2px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+}
+
 @media screen and (max-width:767px){
    html,body{
     overflow-x: hidden;
@@ -1578,7 +1852,7 @@ margin: 15px 25%;
   background-color: #000000;
 }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -2%;
@@ -1843,7 +2117,7 @@ p {
   background-color: #000000;
 }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -3%;
@@ -2108,7 +2382,7 @@ p {
   background-color: #000000;
 }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -3%;
@@ -2372,7 +2646,7 @@ p {
   background-color: #000000;
 }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -3%;
@@ -2641,7 +2915,7 @@ p {
     margin-right: -3%;
   }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar button {
     border: none;
@@ -2902,7 +3176,7 @@ p {
   background-color: #000000;
 }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -3%;
@@ -3144,7 +3418,7 @@ p {
   background-color: #000000;
 }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -3%;
@@ -3386,7 +3660,7 @@ p {
   background-color: #000000;
 }
    .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -3%;
@@ -3648,7 +3922,7 @@ p {
   background-color: #000000;
 }
   .container-fluid{
-    margin: 2% 0;
+    margin: 1% 0;
   }
   .navbar-toggler{
     margin-right: -3%;
