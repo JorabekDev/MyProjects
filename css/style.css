@@ -106,7 +106,7 @@ font-family: 'Roboto', sans-serif; */
   letter-spacing: 1px;
 }
 .navbar-nav {
-  margin: 0 47% auto;
+  margin: 0 51% auto;
 }
 .nav-link {
   color: var(--colorWhite) !important ;
@@ -152,7 +152,7 @@ li .nav-link:hover::after {
   url(../imegs/2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height:40rem;
+  height:100%;
   background-position:right 100% top 69%;
   /* overflow: hidden; */
 }
